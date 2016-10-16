@@ -2,7 +2,7 @@ app.controller('MainCtrl', ['$rootScope', function ($rootScope) {
   var vm = this;
 
   vm.editStates = {
-    section: true
+    section: false
   };
 
   // Listener for toggle events in the sidebar.

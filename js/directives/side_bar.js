@@ -3,7 +3,7 @@ app.controller('SideBarCtrl', ['$rootScope', function ($rootScope) {
   var vm = this;
 
   vm.editStates = {
-    section: true
+    section: false
   };
 
   vm.toggle = function (stateObj) {

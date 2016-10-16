@@ -6,8 +6,14 @@
     <side-bar></side-bar>
 
     <div ng-repeat='i in [1,2,3,4,5]'>
-      <section ng-show='main.editStates.section' ng-model='i'>
+      <section ng-model='i'>
         This is section {{ i }}
+        <span ng-show='main.editStates.section'>
+          <label>
+            <input type='checkbox'>
+            checkbox to select a section.
+          </label>
+        </span>
       </section>
     </div>
 
