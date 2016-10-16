@@ -1,14 +1,17 @@
 // 'Smart' component. Holds state.
-
-app.controller('SideBarCtrl', function () {
+app.controller('SideBarCtrl', ['$rootScope', function ($rootScope) {
   var vm = this;
 
-  vm.editAllState = false;
-
-  vm.toggleEditAll = function () {
-    vm.editAllState = !vm.editAllState;
+  vm.editStates = {
+    section: true
   };
-});
+
+  vm.toggle = function (stateObj) {
+    vm.editStates[stateObj.type] = stateObj.bool;
+    // Pass editStates obj to master controller.
+    $rootScope.$emit('sidebar.toggled', vm.editStates);
+  };
+}]);
 
 app.directive('sideBar', function () {
   return {
