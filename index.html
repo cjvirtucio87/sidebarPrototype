@@ -5,6 +5,7 @@
   <body ng-controller='MainCtrl as main'>
     <side-bar></side-bar>
 
+    <!-- Sections. -->
     <div ng-repeat='i in [1,2,3,4,5]'>
       <section ng-model='i'>
         This is section {{ i }}
@@ -17,10 +18,22 @@
       </section>
     </div>
 
+    <!-- Textboxes -->
+    <div ng-repeat='i in [1,2,3,4,5]'>
+      <div ng-show='main.editStates.textbox'>
+        <input type='text' placeholder='textbox for {{i}}'>
+      </div>
+    </div>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src='js/app.js'></script>
+
+    <!-- Directives -->
     <script src='js/directives/side_bar.js'></script>
     <script src='js/directives/edit_sections.js'></script>
+    <script src='js/directives/edit_textboxes.js'></script>
+
+    <!-- Controllers -->
     <script src='js/controllers/main_ctrl.js'></script>
   </body>
 </html>

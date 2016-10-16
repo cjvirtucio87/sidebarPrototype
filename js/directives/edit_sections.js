@@ -6,7 +6,7 @@ app.directive('editSections', function () {
       onToggle: '&'
     },
     templateUrl: 'js/templates/edit_sections.html',
-    link: function (scope, elem, attrs) {
+    link: function (scope) {
       // For toggling between checkboxes and edit buttons.
       scope.toggleSectionState = function () {
         // Container for the 'kind' of editable, and the corresponding boolean.
